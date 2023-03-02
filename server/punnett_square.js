@@ -1,5 +1,6 @@
-function calculate(user_inputs){
-    return {}
+function store(user_inputs){
+    return user_inputs
+    /* create database, and do calculation*/
 }
 
-module.exports = {calculate}
+module.exports = {store}

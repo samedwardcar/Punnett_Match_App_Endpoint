@@ -38,7 +38,7 @@ export default function Punnett(){}
 //       Dimples results are: {DimplesCross}
 //     </div>
 //     <div>
-//         <p>Dad's Geneotype:
+//         <p>Dad's Genotype:
 //             <label htmlFor ='dalleles'>Allele's</label>
 //                 <select name="dallele1" id="dallele1">
 //                     <option defaultValue="F">F</option>
@@ -49,7 +49,7 @@ export default function Punnett(){}
 //                     <option defaultValue="f">f</option>
 //                 </select>
 //         </p>  
-//         <p>Mom's Geneotype:
+//         <p>Mom's Genotype:
 //             <label htmlFor ='malleles'>Allele's</label>
 //                 <select name="mallele1" id="mallele1">
 //                     <option defaultValue="F">F</option>

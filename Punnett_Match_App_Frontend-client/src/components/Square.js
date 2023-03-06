@@ -1,6 +1,6 @@
 
 import React , {useState} from "react";
-import PunnettSqure from 'punnett-square';
+import { PunnettSquare } from './Punnett';
 import { Grid, Typography } from "@mui/material";
 
 const Square = () => {
@@ -31,9 +31,9 @@ const Square = () => {
         updateFunction(value);
     };
 
-    const handleCalulation = () => {
+    const handleCalculation = () => {
         const FreckleTraits = ['Freckles', 'No Freckles'];
-        const freckleSquare = new PunnettSqure(FreckleTraits);
+        const freckleSquare = new PunnettSquare(FreckleTraits);
         const MOM = [momMaternalFreckleValue, momPaternalFreckleValue];
         const DAD = [dadPaternalFreckleValue, dadMaternalFreckleValue];
         const freckleCross = freckleSquare.cross(MOM, DAD);
@@ -41,23 +41,18 @@ const Square = () => {
         console.log(  { freckleCross } )
         
         let baldTraits = ['Bald', 'Not Bald'];
-        let baldSquare = new PunnettSqure(baldTraits);
+        let baldSquare = new PunnettSquare(baldTraits);
         let momBaldness = [momPaternalBaldness, momMaternalBaldness];
         let dadBaldness = [dadPaternalBaldness, dadMaternalBaldness];
         let baldCross = baldSquare.cross(momBaldness, dadBaldness);
         setBaldSquare(baldCross);
         
         let dimpleTraits = ['Dimples', 'No Dimples'];
-        let dimpleSquare = new PunnettSqure(dimpleTraits);
+        let dimpleSquare = new PunnettSquare(dimpleTraits);
         let momDimple = [momPaternalDimples, momMaternalDimples];
         let dadDimple = [dadPaternalDimples, dadMaternalDimples];
         let dimpleCross = dimpleSquare.cross(momDimple, dadDimple);
-        setDimpleSquare(dimpleCross);
-        
-  
-        
-
-
+        setDimpleSquare(dimpleCross);             
     }
 
     const style = {
@@ -67,7 +62,7 @@ const Square = () => {
 
     return(
         <>
-        <h1>Square Page punnett</h1>
+        <h1>Square Punnett Page</h1>
         
            <Grid container 
                 justifyContent="center"
@@ -177,7 +172,7 @@ const Square = () => {
         </Grid>
         </Grid>
         <div>
-            <button onClick={handleCalulation}>Calculate</button>
+            <button onClick={handleCalculation}>Calculate</button>
             
         </div>
         <div style={{ textAlign: 'center', marginTop: '20px' }}>
@@ -258,7 +253,5 @@ const Square = () => {
         </>
     )
 }
-
-
 
 export default Square;

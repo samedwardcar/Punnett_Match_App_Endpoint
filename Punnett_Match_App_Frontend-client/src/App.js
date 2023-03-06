@@ -1,65 +1,40 @@
-// import React from "react";
-// import "./App.css";
-
-// function App() {
-//   const [data, setData] = React.useState(null);
-
-//   React.useEffect(() => {
-//     fetch("/api")
-//       .then((res) => res.json())
-//       .then((data) => setData(data.message));
-//   }, []);
-
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <p>{!data ? "Loading..." : data}</p>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
-import React from 'react';
+import * as React from 'react';
 import './App.css';
-// import React from 'react';
-// import { BrowserRouter as Router, Route } from 'react-router-dom';
-// import Nav from './components/Nav';
-
-// import About from './components/About';
-
-// import User from './components/User';
-
 import { Route, Routes, Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar  from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+
 import Home from './components/Home';
 import Contact from './components/Contact';
 import Punnett from './components/Punnett';
-import Login from './components/sigin';
-import Signup from './components/signup';
+import signup from './components/signup';
+import signin from './components/signin';
 import Square from './components/Square';
 import Navbar from './components/Navbar';
 
 function App() {
   return (
     <>
-    { Navbar }
+     <Navbar />
       <nav>
         <ul>
           <li><Link to="/">Home</Link> </li>
           <li><Link to="/Contact">Contact</Link></li>
           <li><Link to="/Punnett">Punnett</Link></li>
-          <li><Link to="/Login">Login</Link> </li>
-          <li><Link to="/Signup">Signup</Link> </li>
+          <li><Link to="/signin">Sign in</Link> </li>
+          <li><Link to="/signup">Sign Up</Link> </li>
           <li><Link to="/Square">Square</Link></li>
         </ul>
       </nav>
    <Routes>
-    <Route path="/" element={<Home />} />
+    <Route path="/Home" element={<Home />} />
     <Route path="/Contact" element={<Contact />} />
     <Route path="/Punnett" element={<Punnett />} />
-    <Route path="/Login" element={<Login />} />
-    <Route path="/Signup" element={<Signup />} />
+    <Route path="/signup" element={<signup />} />
+    <Route path="/signin" element={<signin />} />
     <Route path='/Square' element={<Square />} />
    </Routes>
    </>

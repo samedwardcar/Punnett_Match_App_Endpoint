@@ -1,5 +1,5 @@
 // import React from "react";
-// import PunnettSquare from 'punnett-square';
+// import PunnettSquare from './Punnett';
 
 
 // // const FrecklesTraits = ['F', 'f'];
@@ -28,7 +28,7 @@
 
 // const dynamicCross = FrecklesDynamic.cross(mom, dad);
 
-export default function Punnett(){}
+// export default function Punnett(){}
 //     return(
 //         <>
 //     <h1>Punnett Square</h1>
